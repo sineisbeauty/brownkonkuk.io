@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./visual.css">
+    <link rel="stylesheet" href="./navanddropdown.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="subsitesub.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="content.css">
+    <title>BrownU-KU workshop</title>
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <div id="nav"></div>
+    <script src="nav.js"></script>
+    
+    <!-- 메인 콘텐츠 영역 -->
+    <div class="content">
+        <h1>여기는 메뉴 2에 드롭 2</h1>
+
+        <div class="mainlist">
+            <div class="list">
+                <p class="title">연락인1</p>
+                <span>메일</span>   
+                <br>    
+                외 뭐 소속? 링크드인? 기타등등            
+            </div>
+            <div class="list">
+                <p class="title">연락인2</p>
+                <span>메일</span>   
+                <br>    
+                외 뭐 소속? 링크드인? 기타등등            
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- JavaScript 코드 -->
+    <script>
+        // 마지막 스크롤 위치를 저장할 변수
+        let lastScrollY = window.scrollY;
+
+        // navbar 요소를 선택
+        const navbar = document.querySelector('.navbar');
+
+        // 스크롤 이벤트 리스너 추가
+        window.addEventListener('scroll', () => {
+            // 현재 스크롤 위치 저장
+            const currentScrollY = window.scrollY;
+
+            // 스크롤 방향 확인
+            if (currentScrollY > lastScrollY) {
+                // 아래로 스크롤할 때: navbar에 'hidden' 클래스 추가
+                navbar.classList.add('hidden');
+            } else {
+                // 위로 스크롤할 때: navbar에서 'hidden' 클래스 제거
+                navbar.classList.remove('hidden');
+            }
+
+            // 마지막 스크롤 위치 업데이트
+            lastScrollY = currentScrollY;
+        });
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'slide',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+    </script>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="footer.js"></script>
+
+</body>
+
+</html>
