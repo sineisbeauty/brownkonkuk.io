@@ -51,12 +51,11 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    margin: 0 10%;
 }
 
 .nav-item {
     position: relative;
-    margin: 2rem;
+    margin: 0 2%;
 }
 
 /* 메뉴 링크 스타일 */
