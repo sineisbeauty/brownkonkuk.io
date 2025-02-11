@@ -1,22 +1,82 @@
 /* 메인 콘텐츠 영역 */
-        .content {
-            margin-top: 100px;
-            /* 네비게이션 바 높이만큼 상단 여백 */
-            padding: 0 250px 0 250px;
-            /* 안쪽 여백 */
-        }
-        .content h1 {
-            padding-bottom: 30px;
-            padding-top: 30px;
-        }
-        .content p {
-            padding-top: 30px;
-        }
+.content {
+    margin-top: 100px; /* 데스크톱 기본 마진 */
+    padding: 0 15%; /* 상대적인 패딩으로 변경 */
+    width: 100%;
+}
 
-        .container-lg {
-            max-width: 1140px;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+.content h1 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* 반응형 제목 크기 */
+}
+
+.content p {
+    padding-top: 2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem); /* 반응형 본문 크기 */
+    line-height: 1.6; /* 가독성을 위한 줄 간격 */
+}
+
+.container-lg {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 태블릿 대응 */
+@media screen and (max-width: 1024px) {
+    .content {
+        margin-top: 80px;
+        padding: 0 10%; /* 태블릿에서 패딩 감소 */
+    }
+
+    .content h1 {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .content p {
+        padding-top: 1.5rem;
+    }
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+    .content {
+        margin-top: 70px;
+        padding: 0 5%; /* 모바일에서 패딩 더 감소 */
+    }
+
+    .content h1 {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .content p {
+        padding-top: 1rem;
+    }
+
+    .container-lg {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+}
+
+/* 작은 모바일 기기 대응 */
+@media screen and (max-width: 480px) {
+    .content {
+        padding: 0 3%; /* 매우 작은 화면에서 최소 패딩 */
+    }
+
+    .content h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .content p {
+        font-size: clamp(0.9rem, 4vw, 1rem);
+    }
+}

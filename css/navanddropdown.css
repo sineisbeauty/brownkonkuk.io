@@ -1,143 +1,198 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            /* 요소의 크기에 padding과 border를 포함 */
-        }
+/* 초기화 및 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* 네비게이션 바의 기본 스타일 */
-        .navbar {
-            position: fixed;
-            /* 화면에 고정 (스크롤해도 위치 고정) */
-            top: 0;
-            /* 화면 최상단에 배치 */
-            left: 0;
-            /* 화면 왼쪽에 배치 */
-            width: 100%;
-            /* 전체 너비 사용 */
-            background-color: white;
-            /* 배경색 흰색 */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* 그림자 효과 */
-            transition: transform 0.3s ease-in-out;
-            /* 움직임 애니메이션 설정 */
-            z-index: 1000;
-            /* 슬라이드 visual에 가려지는걸 막기 위함 */
-        }
+/* 네비게이션 바의 기본 스타일 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    z-index: 1000;
+}
 
-        /* 스크롤 시 네비게이션 바를 숨기는 클래스 */
-        .navbar.hidden {
-            transform: translateY(-110%);
-        }
+.navbar.hidden {
+    transform: translateY(-110%);
+}
 
-        /* 네비게이션 바 내부 컨테이너 */
-        .nav-container {
-            max-width: 1200px;
-            /* 최대 너비 설정 */
-            margin: 0 auto;
-            /* 가운데 정렬 */
-            padding: 0 40px;
-            /* 좌우 여백 */
-            display: flex;
-            /* 플렉스박스 레이아웃 사용 */
-            justify-content: space-around;
-            /* 로고와 메뉴 사이 공간 분배 */
-            align-items: center;
-            /* 세로 중앙 정렬 */
-            height: 100px;   
-            /* 네비게이션 바 높이 */
-            border: #333;
-            max-height: 100px;
-        }
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    max-height: 100px;
+}
 
-        /* 로고 스타일 */
-        .logo {
-            display: flex; /* Flexbox 레이아웃 사용 */
-            align-items: center; /* 수직 가운데 정렬 */
-            font-size: 24px;
-            /* 글자 크기 */
-            font-weight: bold;
-            /* 글자 굵기 */
-            text-align: center;
-            text-decoration: none;
-            /* 밑줄 제거 */
-            color: #333;
-            /* 글자 색상 */
-            /* border: solid 2px #333; */
-        }
+/* 본문 콘텐츠 상단 패딩 */
+/* body {
+    padding-top: 100px; 
+} */
 
-        .logo img {
-            height: 90px;
-            width: auto;
-            object-fit: contain;
-            /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
-            padding:5px;
-        }
+/* 로고 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            /* 리스트 점 제거 */
-        }
+.logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    padding: 5px;
+}
 
-        /* 메뉴 아이템 */
-        .nav-item {
-            position: relative;
-            /* 하위 메뉴의 기준점 설정 */
-            margin-left: 60px;
-            /* 메뉴 간격 */
-        }
+/* 네비게이션 메뉴 */
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
 
-        /* 메뉴 링크 스타일 */
-        .nav-link {
-            text-decoration: none;
-            /* 밑줄 제거 */
-            color: #333;
-            /* 글자 색상 */
-            padding: 10px;
-            /* 안쪽 여백 */
-            display: block;
-            /* 블록 레벨 요소로 변경 */
-        }
+/* 메뉴 아이템 */
+.nav-item {
+    position: relative;
+    margin-left: 2rem;
+}
 
-        /* 드롭다운 메뉴 스타일 */
-        .dropdown {
-            position: absolute;
-            /* 메뉴 아이템 기준으로 위치 설정 */
-            top: 100%;
-            /* 메뉴 아이템 바로 아래 위치 */
-            left: 0;
-            /* 왼쪽 정렬 */
-            background-color: white;
-            /* 배경색 */
-            min-width: 120px;
-            /* 최소 너비 */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* 그림자 효과 */
-            display: none;
-            /* 기본적으로 숨김 */
-        }
+/* 메뉴 링크 스타일 */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
 
-        /* 메뉴 아이템에 마우스를 올렸을 때 드롭다운 표시 */
-        .nav-item:hover .dropdown {
-            display: block;
-            /* 드롭다운 메뉴 보이기 */
-        }
+.nav-link:hover {
+    color: #007bff;
+}
 
-        /* 드롭다운 메뉴 아이템 스타일 */
-        .dropdown-item {
-            padding: 10px;
-            /* 안쪽 여백 */
-            display: block;
-            /* 블록 레벨 요소로 변경 */
-            text-decoration: none;
-            /* 밑줄 제거 */
-            color: #333;
-            /* 글자 색상 */
-        }
+/* 드롭다운 메뉴 스타일 */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
 
-        /* 드롭다운 메뉴 아이템 호버 효과 */
-        .dropdown-item:hover {
-            background-color: #f5f5f5;
-            /* 배경색 변경 */
-        }
+/* 메뉴 아이템에 마우스를 올렸을 때 드롭다운 표시 */
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+/* 드롭다운 메뉴 아이템 스타일 */
+.dropdown-item {
+    padding: 12px 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* 드롭다운 메뉴 아이템 호버 효과 */
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* 모바일 반응형 디자인 */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        height: 70px;
+        max-height: 70px;
+        padding: 0 3%;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    body {
+        padding-top: 70px; /* 모바일에서 네비게이션 바 높이만큼 패딩 */
+    }
+
+    .nav-menu {
+        display: none; /* 모바일에서 기본 메뉴 숨김 */
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item {
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-link {
+        padding: 15px;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background-color: #f9f9f9;
+    }
+
+    .nav-item:hover .dropdown {
+        display: block;
+    }
+
+    .dropdown-item {
+        padding: 12px 25px;
+    }
+
+    /* 모바일 메뉴 토글 버튼 */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* 데스크톱과 모바일 사이 중간 크기 대응 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .nav-container {
+        padding: 0 3%;
+    }
+
+    .nav-item {
+        margin-left: 1.5rem;
+    }
+
+    .dropdown {
+        min-width: 180px;
+    }
+}

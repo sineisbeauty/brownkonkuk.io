@@ -1,3 +1,106 @@
+/* 푸터 기본 스타일 */
+footer {
+    padding: 40px 15%; /* 좌우 패딩을 % 단위로 변경 */
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 행 스타일 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* 컬럼 스타일 */
+.col-3, .col-4 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding: 10px;
+    width: 30%;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* 제목 스타일 */
+h5 {
+    font-size: clamp(1.1rem, 4vw, 1.25rem);
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+/* 텍스트 스타일 */
+.text-small {
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+/* 리스트 스타일 */
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 수평선 */
+hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+/* 작은 텍스트 */
+small {
+    font-size: 65%;
+    opacity: 0.5;
+}
+
+/* 태블릿 대응 */
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 30px 10%;
+    }
+
+    .col-3, .col-4 {
+        width: 45%;
+    }
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 20px 5%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-3, .col-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        text-align: center;
+    }
+
+    footer ul {
+        text-align: center;
+    }
+}
+
+/* 기타 유틸리티 클래스 */
 .blockquote-footer {
     display: block;
     font-size: 80%;
@@ -14,10 +117,6 @@
     border-top: 1px solid #e8f3ec;
 }
 
-.card-footer:last-child {
-    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
-}
-
 .modal-footer {
     display: flex;
     align-items: center;
@@ -26,102 +125,10 @@
     border-top: 1px solid #e9ecef;
 }
 
-.modal-footer> :not(:first-child) {
+.modal-footer > :not(:first-child) {
     margin-left: .25rem;
 } 
 
-.modal-footer> :not(:last-child) {
+.modal-footer > :not(:last-child) {
     margin-right: .25rem;
-}
-
-
-
-
-.text-muted {
-    color: #6c757d !important;
-}
-
-footer {
-    padding: 40px 250px;
-    background-color: #fff;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; /* 내용이 넘치지 않도록 */
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 20px 20px 20px;
-    margin: 0;
-    width: 100%;
-    justify-content: space-between;  /* center에서 space-between으로 변경 */
-
-}
-
-h5 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #000;
-}
-
-
-.text-small {
-    font-size: 0.9rem;
-}
-
-.text-muted {
-    color: #6c757d;
-}
-
-.col-3, .col-4 {
-    box-sizing: border-box;
-    flex: 0 0 auto;  
-    padding: 0; 
-    width: 30%;  /* 각 열에 고정 너비 할당 */
-}
-
-.col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-  
-
-.offset-1 {
-    margin-left: 0%;
-}
-
-hr {
-    margin: 2rem 0;
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
-}
-
-small {
-    font-size: 65%;
-}
-
-/* footer 안의 row에 대한 기본 패딩 제거 */
-footer .row {
-    padding: 20px 0;
-}
-
-/* 하단 텍스트 정렬 */
-footer .row:last-child .col-12 {
-    padding-right: 40px;
-}
-
-
-/* 기존의 오프셋 제거 */
-.offset-1 {
-    margin-left: 0;
-}
-
-footer ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.row small {
-    opacity: 0.5;
 }
