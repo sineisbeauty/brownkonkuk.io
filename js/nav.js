@@ -2,7 +2,7 @@ document.getElementById('nav').innerHTML = `
     <nav class="navbar">
         <div class="nav-container">
             <!-- 로고 -->
-            <a href="index.html" class="logo"><img src="../imgs/brown_and_konkuk.png">
+            <a href="index.html" class="logo"><img src="../imgs/bnk.png">
             &nbsp; Brown-Konkuk <br> Workshop  </a>
 
             <!-- 메인 메뉴 -->
