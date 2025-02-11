@@ -1,11 +1,9 @@
-/* 초기화 및 기본 설정 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 네비게이션 바의 기본 스타일 */
 .navbar {
     position: fixed;
     top: 0;
@@ -13,7 +11,8 @@
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    transition: all 20s ease-in-out;
+    transform: translateY(0);
     z-index: 1000;
 }
 
@@ -32,12 +31,7 @@
     max-height: 100px;
 }
 
-/* 본문 콘텐츠 상단 패딩 */
-/* body {
-    padding-top: 100px; 
-} */
 
-/* 로고 스타일 */
 .logo {
     display: flex;
     align-items: center;
@@ -55,13 +49,11 @@
     padding: 5px;
 }
 
-/* 네비게이션 메뉴 */
 .nav-menu {
     display: flex;
     list-style: none;
 }
 
-/* 메뉴 아이템 */
 .nav-item {
     position: relative;
     margin-left: 2rem;
