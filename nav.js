@@ -3,13 +3,13 @@ document.getElementById('nav').innerHTML = `
         <div class="nav-container">
             <!-- 로고 -->
             <a href="index.html" class="logo"><img src="../imgs/brown_and_konkuk.png">
-            &nbsp; BrownU-KU workshop  </a>
+            &nbsp; Brown-Konkuk <br> Workshop  </a>
 
             <!-- 메인 메뉴 -->
             <ul class="nav-menu">
                 <!-- About 메뉴 아이템 -->
                 <li class="nav-item">
-                    <a href="subsite1.html" class="nav-link">Plenary</a>
+                    <a href="plenary.html" class="nav-link">Plenary</a>
                 </li>
                 <li class="nav-item">
                     <!-- 메뉴 2를 누르면 drop1이 기본으로 뜨도록 하기  -->

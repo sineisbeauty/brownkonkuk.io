@@ -4,8 +4,8 @@
     height: 700px; 
     position:relative;
     overflow:hidden; 
-    margin-top: 60px; 
-    /* border: 2px solid #83f5ff;  (오버레이 확인용 보더) */}
+    margin-top: 100px; 
+}
 .visual .swiper-container { 
     height: 680px; 
     background-color: #fff;

@@ -8,7 +8,6 @@ document.getElementById('footer').innerHTML = `
                 <li class="text-muted">Yangjin Kim, Konkuk Univ.</li>
                 <li class="text-muted">Sean Lawler, Brown Univ.</li>
             </ul>
-            <br>
         </div>
     </div>
     <hr>

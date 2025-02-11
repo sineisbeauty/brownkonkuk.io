@@ -1,11 +1,6 @@
-        /* CSS 스타일 시작 */
-
-        /* 모든 요소의 기본 여백을 제거하고 크기 계산 방식을 설정 */
         * {
             margin: 0;
-            /* 바깥 여백 제거 */
             padding: 0;
-            /* 안쪽 여백 제거 */
             box-sizing: border-box;
             /* 요소의 크기에 padding과 border를 포함 */
         }
@@ -33,7 +28,6 @@
         /* 스크롤 시 네비게이션 바를 숨기는 클래스 */
         .navbar.hidden {
             transform: translateY(-110%);
-            /* Y축으로 -100% 이동 (위로 숨김) */
         }
 
         /* 네비게이션 바 내부 컨테이너 */
@@ -50,10 +44,10 @@
             /* 로고와 메뉴 사이 공간 분배 */
             align-items: center;
             /* 세로 중앙 정렬 */
-            height: 60px;   
+            height: 100px;   
             /* 네비게이션 바 높이 */
             border: #333;
-            max-height: 60px;
+            max-height: 100px;
         }
 
         /* 로고 스타일 */
@@ -64,28 +58,24 @@
             /* 글자 크기 */
             font-weight: bold;
             /* 글자 굵기 */
+            text-align: center;
             text-decoration: none;
             /* 밑줄 제거 */
             color: #333;
             /* 글자 색상 */
+            /* border: solid 2px #333; */
         }
 
         .logo img {
-            /* .logo 안에 있는 img 태그 */
-            height: 50px;
-            /* 컨테이너보다 약간 작게 설정 */
+            height: 90px;
             width: auto;
-            /* 가로 비율 자동 유지 */
             object-fit: contain;
             /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding:5px;
         }
 
-        /* 메인 메뉴 리스트 */
         .nav-menu {
             display: flex;
-            /* 가로로 나열 */
             list-style: none;
             /* 리스트 점 제거 */
         }

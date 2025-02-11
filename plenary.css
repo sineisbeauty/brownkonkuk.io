@@ -1,0 +1,135 @@
+/* Plenary box 스타일링 */
+.plenary_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    border: solid 1px #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.plenary_box .img-container {
+    flex: 0 0 160px; 
+    margin-right: 30px;
+    /* border: solid 2px black;        */
+}
+
+.plenary_box .content-container {
+    flex: 1; 
+    border: solid 2px black;
+    overflow: hidden;    
+    word-wrap: break-word; 
+    min-width: 0;
+    padding: 15px;  
+}
+.plenary_box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.plenary_box .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.plenary_box .category {
+    display: inline-block;
+    font-size: 14px;
+    color: #036b29;
+    background-color: #e8f5e9;
+    padding: 4px 12px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.plenary_box .info {
+    padding-left: 4px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.plenary_box .name{
+    padding-left: 4px;
+    font-size: 20px;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* 여기부터는 버튼 */
+
+.button-container {
+    margin-top: 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-profile {
+    background-color: #5b41a5;
+}
+
+.btn-homepage {
+    background-color: #036b29;
+}
+
+.btn-profile.disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-abstract {
+    background-color: #0066cc;
+}
+
+.btn-abstract.disalbed {
+    background-color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.boxcontent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.01s ease-out;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+}
+
+.boxcontent.active {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+

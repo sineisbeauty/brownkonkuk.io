@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./visual.css">
+    <link rel="stylesheet" href="./navanddropdown.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="subsitesub.css">
+    <link rel="stylesheet" href="plenary.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="content.css">
+    <title>BrownU-KU workshop</title>
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <div id="nav"></div>
+    <script src="nav.js"></script>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <div class="content">
+        <h1>Plenary</h1>
+
+        <!-- 옛 방식 (mainlist사용) -->
+        <!-- <div class="mainlist">
+            <div class="list">
+                <p class="title">Sookkyung Lim </p>
+                <span> University of Cincinatti </span>
+                <br>
+                <a href="https://homepages.uc.edu/~limsg/"> homepage </a> &nbsp;
+                abstract 내용
+            </div>
+            <div class="list">
+                <p class="title">제목2</p>
+                <span>사람 이름과 소속 </span>
+                <br>
+                abstract 내용
+            </div>
+        </div> -->
+        
+        <!-- 1번  -->
+        <div class="plenary_box">
+            <div class="title">  Mathematical modeling of cell motility in glioblastoma and pathogenic bacteria </div>
+            
+            <div class="content-wrapper">
+                <div class="img-container">
+                    <img src="speaker-image.jpg" alt="Speaker">
+                </div>
+                <div class="content-container">
+                    <div class="name"> Sookkyung Lim </div>
+                    <div class="info"> University of Cincinatti </div>
+                    <!-- 분야도 뭔가 넣어놨는데 좀 안어울려서 우선 뺌. 근데 언젠간 넣어보고싶긴 혀.  -->
+                    <!-- <div class="category"> 분야 </div> -->
+                    <div class="button-container">
+                        <!-- <button class="btn btn-profile" onclick="toggleContent('profile')">Profile</button> -->
+                        <a href="https://homepages.uc.edu/~limsg/" target="_blank"><button class="btn btn-homepage">homepage</button></a>
+                        <!-- <button class="btn btn-profile disabled">Profile</button> -->
+                        <button class="btn btn-abstract" onclick="toggleContent('abstract')">Abstract</button>
+                        <!-- <button class="btn btn-abstract disabled">Abstract</button> -->
+                    </div>
+
+                    <div id="abstractContent" class="boxcontent">
+                        <h3>Abstract</h3>
+                        <p>Our current approach to cancer treatment has been largely driven by finding molecular targets...</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 2번 -->
+        <div class="plenary_box">
+            <div class="title"> Mathematical models of membrane structures and their role in cell motility</div>
+            
+            <div class="content-wrapper">
+                <div class="img-container">
+                    <img src="speaker-image.jpg" alt="Speaker">
+                </div>
+                <div class="content-container">
+                    <div class="name"> Magda Stolarska </div>
+                    <div class="info"> University of St. Thomas </div>
+                    <!-- 분야도 뭔가 넣어놨는데 좀 안어울려서 우선 뺌. 근데 언젠간 넣어보고싶긴 혀.  -->
+                    <!-- <div class="category"> 분야 </div> -->
+                    <div class="button-container">
+                        <a href="https://cas.stthomas.edu/departments/faculty/magdalena-stolarska/" target="_blank"><button class="btn btn-homepage">homepage</button></a>
+                        <!-- <button class="btn btn-abstract" onclick="toggleContent('abstract')">Abstract</button> -->
+                        <button class="btn btn-abstract.disabled">Abstract</button>
+                    </div>
+
+                
+                    <div id="abstractContent" class="boxcontent">
+                        <h3>Abstract</h3>
+                        <p>Our current approach to cancer treatment has been largely driven by finding molecular targets...</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- 3번 -->
+        <div class="plenary_box">
+            <div class="title"> title </div>
+            
+            <div class="content-wrapper">
+                <div class="img-container">
+                    <img src="speaker-image.jpg" alt="Speaker">
+                </div>
+                <div class="content-container">
+                    <div class="name"> Sandy Anderson </div>
+                    <div class="info"> Moffitt Cancer Center </div>
+                    <!-- 분야도 뭔가 넣어놨는데 좀 안어울려서 우선 뺌. 근데 언젠간 넣어보고싶긴 혀.  -->
+                    <!-- <div class="category"> 분야 </div> -->
+                    <div class="button-container">
+                        <a href="https://labpages.moffitt.org/andersona/" target="_blank"><button class="btn btn-homepage">homepage</button></a>
+                        <!-- <button class="btn btn-abstract" onclick="toggleContent('abstract')">Abstract</button> -->
+                        <button class="btn btn-abstract.disabled">Abstract</button>
+                    </div>
+
+                    <div id="abstractContent" class="boxcontent">
+                        <h3>Abstract</h3>
+                        <p>Our current approach to cancer treatment has been largely driven by finding molecular targets...</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 4번 -->
+        <div class="plenary_box">
+            <div class="title"> title </div>
+            
+            <div class="content-wrapper">
+                <div class="img-container">
+                    <img src="speaker-image.jpg" alt="Speaker">
+                </div>
+                <div class="content-container">
+                    <div class="name">Yangjin Kim </div>
+                    <div class="info"> Konkuk University </div>
+                    <!-- 분야도 뭔가 넣어놨는데 좀 안어울려서 우선 뺌. 근데 언젠간 넣어보고싶긴 혀.  -->
+                    <!-- <div class="category"> 분야 </div> -->
+                    <div class="button-container">
+                        <a href="https://sites.google.com/view/yangjinkim/home?authuser=0" target="_blank"><button class="btn btn-homepage">homepage</button></a>
+                        <!-- <button class="btn btn-abstract" onclick="toggleContent('abstract')">Abstract</button> -->
+                        <button class="btn btn-abstract.disabled">Abstract</button>
+                    </div>
+
+                    <div id="abstractContent" class="boxcontent">
+                        <h3>Abstract</h3>
+                        <p>Our current approach to cancer treatment has been largely driven by finding molecular targets...</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JavaScript 코드 -->
+    <script>
+        // 마지막 스크롤 위치를 저장할 변수
+        let lastScrollY = window.scrollY;
+
+        // navbar 요소를 선택
+        const navbar = document.querySelector('.navbar');
+
+        // 스크롤 이벤트 리스너 추가
+        window.addEventListener('scroll', () => {
+            // 현재 스크롤 위치 저장
+            const currentScrollY = window.scrollY;
+
+            // 스크롤 방향 확인
+            if (currentScrollY > lastScrollY) {
+                // 아래로 스크롤할 때: navbar에 'hidden' 
+                navbar.classList.add('hidden');
+            } else {
+                // 위로 스크롤할 때: navbar에서 'hidden' 제거
+                navbar.classList.remove('hidden');
+            }
+
+            // 마지막 스크롤 위치 업데이트
+            lastScrollY = currentScrollY;
+        });
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'slide',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+        function toggleContent(type) {
+            const profileContent = document.getElementById('profileContent');
+            const abstractContent = document.getElementById('abstractContent');
+            
+            if (type === 'profile') {
+                if (profileContent.classList.contains('active')) {
+                    profileContent.classList.remove('active');
+                } else {
+                    profileContent.classList.add('active');
+                    abstractContent.classList.remove('active');
+                }
+            } else {
+                if (abstractContent.classList.contains('active')) {
+                    abstractContent.classList.remove('active');
+                } else {
+                    abstractContent.classList.add('active');
+                    profileContent.classList.remove('active');
+                }
+            }
+        }
+    </script>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="footer.js"></script>
+</body>
+
+</html>
