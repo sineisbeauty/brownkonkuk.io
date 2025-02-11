@@ -6,6 +6,7 @@
     position: relative;
     overflow: hidden; 
     margin-top: 100px; /* 데스크톱에서 네비게이션 바 높이만큼 밀어내기 */
+    /* 수정 */
 }
 
 /* 반응형 마진 조정 */
