@@ -1,19 +1,40 @@
-        .form-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 90%;
-            /* padding-bottom: 110%는 container의 width를 기준으로 높이를 설정하는 테크닉입니다. 이를 "aspect ratio hack"이라고도 부릅니다. 예: container width가 1000px이면, padding-bottom은 1100px(110%)가 됩니다. */
-            overflow: hidden;
-            max-width: 1250px;
-            margin: 0 auto;
-            /* border: solid black; */
-        }
+.form-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 90%; /* 기본 aspect ratio 유지 */
+    overflow: hidden;
+    max-width: 1250px; /* 푸터와 동일한 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
 
-        .form-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+.form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 반응형 패딩 및 너비 조정 */
+@media screen and (max-width: 1250px) {
+    .form-container {
+        width: 90%; /* 너비를 % 단위로 조정 */
+        padding-bottom: 95%; /* 약간의 높이 조정 */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 95%; /* 모바일에서 너비 더 조정 */
+        padding-bottom: 100%; /* 높이 추가 조정 */
+    }
+}
+
+/* 매우 작은 화면 대응 */
+@media screen and (max-width: 480px) {
+    .form-container {
+        width: 100%; /* 화면 전체 너비 */
+        padding-bottom: 110%; /* 높이 추가 조정 */
+    }
+}

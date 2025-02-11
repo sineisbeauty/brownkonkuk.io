@@ -1,6 +1,61 @@
-.mainlist .list{padding:30px 0;border-bottom:1px solid #e0e0e0}
-.mainlist .list:first-child{border-top:1px solid #e0e0e0}
-.mainlist .list:last-child{border-bottom:0px;}
-.mainlist .title{font-weight:900;font-size:22px;margin-bottom:15px;line-height: 1.5em;}
-.mainlist .list span{display:block;font-size:15px;font-weight:700;}
-.mainlist .list span+strong{margin-top:20px}
+.mainlist .list {
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mainlist .list:first-child {
+    border-top: 1px solid #e0e0e0;
+}
+
+.mainlist .list:last-child {
+    border-bottom: 0;
+}
+
+.mainlist .title {
+    font-weight: 900;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.mainlist .list span {
+    display: block;
+    font-size: clamp(0.9rem, 4vw, 1rem);
+    font-weight: 700;
+}
+
+.mainlist .list span + strong {
+    display: block;
+    margin-top: 1.2rem;
+    font-size: clamp(0.9rem, 4vw, 1rem);
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+    .mainlist .list {
+        padding: 1.5rem 0;
+    }
+
+    .mainlist .title {
+        margin-bottom: 0.8rem;
+    }
+
+    .mainlist .list span + strong {
+        margin-top: 1rem;
+    }
+}
+
+/* 작은 화면 대응 */
+@media screen and (max-width: 480px) {
+    .mainlist .list {
+        padding: 1rem 0;
+    }
+
+    .mainlist .title {
+        margin-bottom: 0.5rem;
+    }
+
+    .mainlist .list span + strong {
+        margin-top: 0.8rem;
+    }
+}
