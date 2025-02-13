@@ -60,7 +60,6 @@
 .nav-item {
     position: relative;
     display: flex;
-    /* font-size:clamp(1rem,2vw,1.2rem); */
     font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
@@ -122,6 +121,7 @@
     }
     .nav-menu {
         display:none;
+        padding:0;
     }
 
     .nav-container {
@@ -134,8 +134,6 @@
         background: none;
         border: none;
         cursor: pointer;
-        /* padding: 10px; */
-        /* margin-right: 10px; */
         
     }
 
@@ -183,6 +181,7 @@
     .nav-menu.active .nav-link {
         width: 100%;
         display: block;
+        padding:0;
     }
 }
 /* 데스크톱과 모바일 사이 중간 크기 대응 */
