@@ -22,7 +22,6 @@
 .plenary_box .img-container {
     flex: 0 0 160px; 
     margin-right: 30px;
-    /* border: solid 2px black;        */
 }
 
 .plenary_box .content-container {
@@ -39,7 +38,7 @@
     border-radius: 4px;
 }
 .plenary_box .title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
@@ -48,7 +47,7 @@
 
 .plenary_box .category {
     display: inline-block;
-    font-size: 14px;
+    font-size: 1rem;
     color: #036b29;
     background-color: #e8f5e9;
     padding: 4px 12px;
@@ -58,7 +57,7 @@
 
 .plenary_box .info {
     padding-left: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     line-height: 1.6;
 }
@@ -131,5 +130,20 @@
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .plenary_box .img-container{
+        display: block;
+    }
+    .plenary_box .title{
+        font-size: 0.7rem;
+    }
+    .plenary_box .category{
+        font-size: 0.4rem;
+    }
+    .plenary_box .info{
+        font-size: 0.4rem;
+    }
 }
 
