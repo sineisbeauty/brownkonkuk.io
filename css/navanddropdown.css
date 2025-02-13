@@ -11,14 +11,17 @@
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease-in-out;
     transform: translateY(0);
+    transition: transform 5s ease-out;
     z-index: 1000;
     height: 15vh;
+    opacity: 1;
 }
 
 .navbar.hidden {
     transform: translateY(-110%);
+    visibility: hidden;
+    opacity: 0;
 }
 
 .nav-container {
@@ -169,6 +172,7 @@
         background-color: white;
         flex-direction: column;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        gap:0;
     }
 
     .nav-menu.active .nav-item {

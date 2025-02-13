@@ -1,23 +1,27 @@
-        // 마지막 스크롤 위치를 저장할 변수
-        let lastScrollY = window.scrollY;
+let lastScrollY = window.scrollY;
+let navbar = document.querySelector('.navbar');
+let isScrollingDown = false; // 현재 스크롤 방향을 저장하는 변수
 
-        // navbar 요소를 선택
-        const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+    let currentScrollY = window.scrollY;
 
-        // 스크롤 이벤트 리스너 추가
-        window.addEventListener('scroll', () => {
-            // 현재 스크롤 위치 저장
-            const currentScrollY = window.scrollY;
-
-            // 스크롤 방향 확인
-            if (currentScrollY > lastScrollY) {
-                // 아래로 스크롤할 때: navbar에 'hidden' 클래스 추가
+    if (currentScrollY > lastScrollY) {
+        // 아래로 스크롤하면 네비게이션 바 숨기기 (중복 실행 방지)
+        if (!isScrollingDown) {
+            isScrollingDown = true;
+            requestAnimationFrame(() => {
                 navbar.classList.add('hidden');
-            } else {
-                // 위로 스크롤할 때: navbar에서 'hidden' 클래스 제거
+            });
+        }
+    } else {
+        // 위로 스크롤하면 네비게이션 바 다시 보이기 (중복 실행 방지)
+        if (isScrollingDown) {
+            isScrollingDown = false;
+            requestAnimationFrame(() => {
                 navbar.classList.remove('hidden');
-            }
+            });
+        }
+    }
 
-            // 마지막 스크롤 위치 업데이트
-            lastScrollY = currentScrollY;
-        });
+    lastScrollY = currentScrollY; // 현재 스크롤 위치 업데이트
+});
