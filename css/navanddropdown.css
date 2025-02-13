@@ -20,8 +20,6 @@
 
 .navbar.hidden {
     transform: translateY(-110%);
-    visibility: hidden;
-    opacity: 0;
 }
 
 .nav-container {
@@ -32,6 +30,7 @@
     justify-content:space-between;
     align-items: center;
     height: 90%;
+    /* border: solid#eee; */
 }
 
 
@@ -137,9 +136,8 @@
         background: none;
         border: none;
         cursor: pointer;
-        
     }
-
+    
     .menu-toggle span {
         display: block;
         width: 25px;
@@ -180,6 +178,8 @@
         text-align: center;
         padding: 15px 0;
         border-bottom: 1px solid #eee;
+        /* border:solid#333; */
+
     }
 
     .nav-menu.active .nav-link {
