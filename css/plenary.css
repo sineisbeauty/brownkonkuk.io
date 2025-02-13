@@ -134,16 +134,20 @@
 
 @media screen and (max-width: 768px) {
     .plenary_box .img-container{
-        display: block;
+        display: none;
     }
     .plenary_box .title{
-        font-size: 0.7rem;
+        font-size: 1.2rem;
     }
-    .plenary_box .category{
-        font-size: 0.4rem;
-    }
+    /* .plenary_box .category{
+        font-size: 1rem;
+    } */
     .plenary_box .info{
-        font-size: 0.4rem;
+        font-size: 0.8rem;
     }
+    .plenary_box .name{
+        font-size: 1rem;
+    }
+    
 }
 
