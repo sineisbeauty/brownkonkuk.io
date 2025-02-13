@@ -19,6 +19,7 @@
 
 .navbar.hidden {
     transform: translateY(-110%);
+    transition: all 20s ease-in-out;
 }
 
 .nav-container {
@@ -29,6 +30,7 @@
     justify-content:space-between;
     align-items: center;
     height: 90%;
+    border: solid#eee;
 }
 
 
