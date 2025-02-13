@@ -134,9 +134,8 @@
         background: none;
         border: none;
         cursor: pointer;
-        
     }
-
+    
     .menu-toggle span {
         display: block;
         width: 25px;
@@ -169,6 +168,7 @@
         background-color: white;
         flex-direction: column;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        gap:0;
     }
 
     .nav-menu.active .nav-item {
@@ -176,6 +176,8 @@
         text-align: center;
         padding: 15px 0;
         border-bottom: 1px solid #eee;
+        /* border:solid#333; */
+
     }
 
     .nav-menu.active .nav-link {
