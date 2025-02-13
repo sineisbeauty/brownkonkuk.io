@@ -1,7 +1,7 @@
 /* 메인 콘텐츠 영역 */
 .content {
-    margin-top: 100px; /* 데스크톱 기본 마진 */
-    padding: 0 15%; /* 상대적인 패딩으로 변경 */
+    margin-top: 15vh;
+    padding: 0 15%; 
     width: 100%;
 }
 
@@ -30,7 +30,10 @@
 @media screen and (max-width: 1024px) {
     .content {
         margin-top: 80px;
-        padding: 0 10%; /* 태블릿에서 패딩 감소 */
+        width: 90%;         
+        max-width: 1250px;  
+        margin-left: auto;  
+        margin-right: auto; 
     }
 
     .content h1 {
@@ -47,8 +50,10 @@
 @media screen and (max-width: 768px) {
     .content {
         margin-top: 70px;
-        padding: 0 5%; /* 모바일에서 패딩 더 감소 */
+        padding: 0;     /* 패딩을 제거하고 */
+        width: 90%;     /* 대신 width로 조절 */
     }
+
 
     .content h1 {
         padding-bottom: 1rem;
@@ -58,6 +63,7 @@
 
     .content p {
         padding-top: 1rem;
+        text-align: center;
     }
 
     .container-lg {
@@ -78,5 +84,18 @@
 
     .content p {
         font-size: clamp(0.9rem, 4vw, 1rem);
+    }
+}
+
+.content.greetings-content {
+    margin-top:5vh;
+    padding: 0 15%; 
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .content.greetings-content {
+        width: 85%;
+        padding: 4% 0;
     }
 }
