@@ -148,6 +148,8 @@
     .plenary_box .name{
         font-size: 1rem;
     }
-    
+    .boxcontent .p{
+        text-align: left;
+    }
 }
 
