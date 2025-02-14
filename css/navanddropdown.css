@@ -12,14 +12,13 @@
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
-    transition-duration: 1s;
+    transition: transform 1s ease-out;
     z-index: 1000;
     height: 11vh;
 }
 
 .navbar.hidden {
     transform: translateY(-110%);
-    transition-duration: 1s;
 }
 
 .nav-container {
@@ -43,6 +42,7 @@
     /* font-size: clamp(1.2rem, 3vw, 1.5rem); */
     font-size: clamp(1.25rem, 2.5vw, 1.75rem);
     font-weight: 600;
+    gap: 1vw;
 }
 
 .logo img {
@@ -63,6 +63,7 @@
     position: relative;
     display: flex;
     font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 600;
 }
 
 /* 메뉴 링크 스타일 */
