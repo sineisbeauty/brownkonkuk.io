@@ -21,6 +21,9 @@ document.getElementById('nav').innerHTML = `
                     <a href="plenary.html" class="nav-link">Plenary</a>
                 </li>
                 <li class="nav-item">
+                    <a href="plenary.html" class="nav-link">Program</a>
+                </li>
+                <li class="nav-item">
                     <a href="menu2_drop1.html" class="nav-link">Registration</a>
                 </li>
                 <li class="nav-item">
