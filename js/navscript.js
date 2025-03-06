@@ -1,27 +1,25 @@
 let lastScrollY = window.scrollY;
-let navbar = document.querySelector('.navbar');
-let isScrollingDown = false; // 현재 스크롤 방향을 저장하는 변수
+let isScrollingDown = false;
+const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
-    let currentScrollY = window.scrollY;
-
+    const currentScrollY = window.scrollY;
+    
     if (currentScrollY > lastScrollY) {
-        // 아래로 스크롤하면 네비게이션 바 숨기기 (중복 실행 방지)
-        if (!isScrollingDown) {
-            isScrollingDown = true;
-            requestAnimationFrame(() => {
-                navbar.classList.add('hidden');
-            });
-        }
+        // 스크롤 내리는 중
+        isScrollingDown = true;
     } else {
-        // 위로 스크롤하면 네비게이션 바 다시 보이기 (중복 실행 방지)
-        if (isScrollingDown) {
-            isScrollingDown = false;
-            requestAnimationFrame(() => {
-                navbar.classList.remove('hidden');
-            });
-        }
+        // 스크롤 올리는 중
+        isScrollingDown = false;
     }
 
-    lastScrollY = currentScrollY; // 현재 스크롤 위치 업데이트
+    requestAnimationFrame(() => {
+        if (isScrollingDown) {
+            navbar.classList.add('hidden'); // 위로 숨김
+        } else {
+            navbar.classList.remove('hidden'); // 아래로 나타남
+        }
+    });
+
+    lastScrollY = currentScrollY;
 });

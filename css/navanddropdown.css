@@ -12,10 +12,9 @@
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
-    transition: transform 5s ease-out;
+    transition: transform 1s ease-out;
     z-index: 1000;
-    height: 15vh;
-    opacity: 1;
+    height: 11vh;
 }
 
 .navbar.hidden {
@@ -29,7 +28,7 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    height: 90%;
+    height: 100%;
     /* border: solid#eee; */
 }
 
@@ -43,6 +42,7 @@
     /* font-size: clamp(1.2rem, 3vw, 1.5rem); */
     font-size: clamp(1.25rem, 2.5vw, 1.75rem);
     font-weight: 600;
+    gap: 1vw;
 }
 
 .logo img {
@@ -56,14 +56,14 @@
     display: flex;
     list-style: none;
     margin: 0 3%;
-    gap: 2rem;  
+    gap: 3vw;  
 }
 
 .nav-item {
     position: relative;
     display: flex;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    /* border:solid#eee; */
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    font-weight: 600;
 }
 
 /* 메뉴 링크 스타일 */
