@@ -18,7 +18,7 @@ document.getElementById('nav').innerHTML = `
             <ul class="nav-menu">
                 <!-- About 메뉴 아이템 -->
                 <li class="nav-item">
-                    <a href="plenary.html" class="nav-link">Plenary</a>
+                    <a href="plenary.html" class="nav-link">Speakers</a>
                 </li>
                 <li class="nav-item">
                     <a href="plenary.html" class="nav-link">Program</a>
