@@ -27,6 +27,12 @@ document.getElementById('nav').innerHTML = `
                     <a href="menu3_drop1.html" class="nav-link">Abstract</a>
                 </li>
                 <li class="nav-item">
+                    <a href="../html/Travel.html" class="nav-link">Travel</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../html/Venue.html" class="nav-link">Venue</a>
+                </li>
+                <li class="nav-item">
                     <a href="../html/contact.html" class="nav-link">Contact</a>
                 </li>
             </ul>
