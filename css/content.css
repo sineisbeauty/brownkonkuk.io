@@ -17,7 +17,7 @@
     line-height: 1.6; /* 가독성을 위한 줄 간격 */
 }
 
-.container-lg {
+.container-lg { 
     max-width: 1140px;
     width: 100%;
     padding-right: 5%;
