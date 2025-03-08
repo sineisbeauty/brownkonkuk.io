@@ -40,7 +40,7 @@
     text-align: center;
     color: #333;
     /* font-size: clamp(1.2rem, 3vw, 1.5rem); */
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 600;
     gap: 1vw;
 }
