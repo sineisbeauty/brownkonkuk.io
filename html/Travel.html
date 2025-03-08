@@ -12,6 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="../css/content.css">
     <title>BrownU-KU workshop</title>
+    <style>
+        #map {
+          height: 400px;
+          width: 100%;
+        }
+      </style>
 </head>
 
 <body>
@@ -24,6 +30,11 @@
         <h1>Travel</h1>
 
         <div class="mainlist">
+            <!-- <div class="list">
+                <p class="title"> Confrence Hall </p>
+                <div id="map"></div>
+                
+            </div> -->
             <div class="list">
                 <p class="title"> Airport </p>
                 <p> <a href="https://flyri.com/"> Rhode Island T.F. Green International Airport (PVD) </a> </p>
@@ -92,6 +103,35 @@
         });
     </script>
 
+    <!-- 인터랙티브 구글 맵을 위한 java  -->
+    <script>
+        function initMap() {
+          const center = { lat: 41.8268983, lng: -71.4052083 };
+          
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: center,
+          });
+          
+          const marker = new google.maps.Marker({
+            position: center,
+            map: map,
+            title: "Confrence Hall",
+          });
+          
+          const infowindow = new google.maps.InfoWindow({
+            content: "<p> Providence, RI 02912, USA </p>"
+          });
+          
+          marker.addListener("click", () => {
+            infowindow.open(map, marker);
+          });
+        }
+      </script>
+      
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=apikeyhere&callback=initMap">
+      </script>
     <!-- footer -->
     <div id="footer"></div>
     <script src="../js/footer.js"></script>
