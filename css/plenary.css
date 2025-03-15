@@ -26,11 +26,12 @@
 
 .plenary_box .content-container {
     flex: 1; 
-    border: solid 2px black;
+    border: solid 2px #666;
     overflow: hidden;    
     word-wrap: break-word; 
     min-width: 0;
     padding: 15px;  
+    border-radius: 20px;
 }
 .plenary_box img {
     width: 100%;
@@ -60,6 +61,9 @@
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 65px;
+    display: block;
 }
 
 .plenary_box .name{
