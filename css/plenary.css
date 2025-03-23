@@ -65,7 +65,24 @@
     margin-bottom: 65px;
     display: block;
 }
-
+.plenary_box .poster-info {
+    padding-left: 4px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.plenary_box .poster-info-mail{
+    padding-left: 4px;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 65px;
+    display: block;
+}
 .plenary_box .name{
     padding-left: 4px;
     font-size: 20px;
@@ -121,7 +138,7 @@
 
 .boxcontent {
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     transition: max-height 0.01s ease-out;
     background-color: #f5f5f5;
     margin-top: 10px;

@@ -81,9 +81,9 @@
 
 /* 드롭다운 메뉴 스타일 */
 .dropdown {
-    position: absolute;
+    position:absolute;
     top: 100%;
-    left: 0;
+    left: -45px;
     background-color: white;
     min-width: 200px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -104,6 +104,7 @@
     text-decoration: none;
     color: #333;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 /* 드롭다운 메뉴 아이템 호버 효과 */
@@ -190,6 +191,62 @@
         width: 100%;
         display: block;
         padding:0;
+    }
+
+    .nav-item {
+        position: relative;
+        width: 100%;
+    }
+    
+    .dropdown {
+        position: static; /* 절대 위치에서 정적 위치로 변경 */
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background-color: #f8f8f8;
+        min-width: 100%;
+        left: 0;
+    }
+
+    .nav-item.active .dropdown {
+        display: block;
+    }
+    
+    /* 드롭다운 아이템 스타일 조정 */
+    .dropdown-item {
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .nav-item:hover .dropdown {
+        display: none;
+    }
+    
+    /* active 클래스로만 드롭다운 표시되도록 설정 */
+    .nav-item.active .dropdown {
+        display: block;
+    }
+    
+    /* 드롭다운 위치와 스타일 개선 */
+    .dropdown {
+        position: static;
+        left: 0;
+        min-width: 100%;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: #f5f5f5;
+        margin-top: 5px;
+    }
+    
+    /* 드롭다운 아이템 스타일 */
+    .dropdown-item {
+        padding: 10px 0;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    /* Program 메뉴 내부의 드롭다운 항목들을 명확히 구분 */
+    .nav-menu.active .nav-item.active {
+        padding-bottom: 0;
     }
 }
 /* 데스크톱과 모바일 사이 중간 크기 대응 */

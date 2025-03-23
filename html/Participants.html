@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/visual.css">
+    <link rel="stylesheet" href="../css/navanddropdown.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/plenary.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+    <title>BrownU-KU workshop</title>
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <div id="nav"></div>
+    <script src="../js/nav.js"></script>
+    
+    <!-- 메인 콘텐츠 영역 -->
+    <div class="content">
+        <h1>Participants</h1>
+        
+        <div class="mainlist">
+            <p>
+                Alexander A. Anderson (Moffitt Cancer Center) <br>
+                Haneol Cho (Konkuk University) <br>
+                Hoyeon Choi (Konkuk University) <br>
+                JeongHyeon Chung (Konkuk University) <br>
+                Nazanin Ahmadi Daryakenari (Brown University) <br>
+                Samuel Isaacson (Brown University) <br>
+                Hyeontae Jeong (Brown University) <br>
+                Donggu Lee (Konkuk University) <br>
+                Herbert Levine (Northeastern University) <br>
+                Sookkyung Lim (University of Cincinatti) <br>
+                Jiwon Kim (Brown University)
+                Minjong Kim (Konkuk University) <br>
+                Yangjin Kim (Konkuk University) <br>
+                Sean Lawler (Brown University) <br>
+                Magdalena Stolarska (University of St. Thomas) <br>
+                Ian Wong (Brown University) <br>
+
+            </p>
+
+        </div>
+    </div>
+   
+
+    <!-- JavaScript 코드 -->
+    <script>
+        // 마지막 스크롤 위치를 저장할 변수
+        let lastScrollY = window.scrollY;
+
+        // navbar 요소를 선택
+        const navbar = document.querySelector('.navbar');
+
+        // 스크롤 이벤트 리스너 추가
+        window.addEventListener('scroll', () => {
+            // 현재 스크롤 위치 저장
+            const currentScrollY = window.scrollY;
+
+            // 스크롤 방향 확인
+            if (currentScrollY > lastScrollY) {
+                // 아래로 스크롤할 때: navbar에 'hidden' 클래스 추가
+                navbar.classList.add('hidden');
+            } else {
+                // 위로 스크롤할 때: navbar에서 'hidden' 클래스 제거
+                navbar.classList.remove('hidden');
+            }
+
+            // 마지막 스크롤 위치 업데이트
+            lastScrollY = currentScrollY;
+        });
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'slide',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+    </script>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="../js/footer.js"></script>
+
+</body>
+
+</html>
