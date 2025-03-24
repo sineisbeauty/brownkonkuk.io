@@ -23,6 +23,7 @@ document.getElementById('nav').innerHTML = `
                 <li class="nav-item">
                     <a href="Program.html" class="nav-link">Program</a>
                     <div class="dropdown">
+                        <a href="Program.html" class="dropdown-item"> Program </a>
                         <a href="Participants.html" class="dropdown-item"> Participants </a>
                         <a href="Poster.html" class="dropdown-item"> Poster Session </a>
                     </div>
