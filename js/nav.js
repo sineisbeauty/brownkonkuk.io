@@ -32,7 +32,7 @@ document.getElementById('nav').innerHTML = `
                     <a href="Registration.html" class="nav-link">Registration</a>
                 </li>
                 <li class="nav-item">
-                    <a href="menu3_drop1.html" class="nav-link">Abstract</a>
+                    <a href="Abstract.html" class="nav-link">Abstract</a>
                 </li>
                 <li class="nav-item">
                     <a href="../html/Travel.html" class="nav-link">Travel</a>
