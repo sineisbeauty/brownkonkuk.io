@@ -15,28 +15,34 @@
 
     <style>
         table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 20px 0;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        th, td {
-          padding: 10px;
-          text-align: center;
-          border: 1px solid #ddd;
-        }
-        th {
-          background-color: #f2f2f2;
-        }
+
+        th,
         td {
-          background-color: #fafafa;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
         }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
         tr:nth-child(even) td {
-          background-color: #f9f9f9;
+            background-color: #f9f9f9;
         }
+
         /* tr:hover td {
           background-color: #eaeaea;
         } */
-      </style>
+    </style>
 
 </head>
 
@@ -115,17 +121,37 @@
                 </tr>
             </table>
         </div>
-        
+
         <h1> Poster </h1>
 
         <div class="mainlist">
             <img src="../imgs/pstr5_page-0001.jpg" alt="poster" style="width: 100%; height: auto;">
+            <a href="../imgs/pstr5_page-0001.jpg" download="poster" target="blank">Download (jpg)</a>
+            <a href="../imgs/pstr5.pdf" download="poster2" target="blank"> Download (pdf)</a>
         </div>
     </div>
 
 
     <!-- JavaScript 코드 -->
     <script>
+        function downloadJPG() {
+            const fileUrl = '../imgs/pstr5_page-0001.jpg';
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'poster';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        function downloadPDF() {
+            const fileUrl = '../imgs/pstr5.pdf';
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'poster2';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
         // 마지막 스크롤 위치를 저장할 변수
         let lastScrollY = window.scrollY;
 
