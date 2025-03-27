@@ -39,6 +39,9 @@ document.getElementById('nav').innerHTML = `
                 </li>
                 <li class="nav-item">
                     <a href="../html/Venue.html" class="nav-link">Venue</a>
+                    <div class="dropdown">
+                        <a href="../html/Venue.html" class="dropdown-item"> Venue </a>
+                        <a href="../html/Parking.html" class="dropdown-item"> Parking </a>
                 </li>
                 <li class="nav-item">
                     <a href="../html/contact.html" class="nav-link">Contact</a>
