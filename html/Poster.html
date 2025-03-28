@@ -171,10 +171,15 @@
                     <div class="button-container">
                         <button class="btn btn-abstract"
                             onclick="toggleContent('abstractPosterContent4')">Abstract</button>
+                        <button class="btn btn-poster" onclick="toggleContent('Poster4')">Poster</button>
                         <!-- <button class="btn btn-abstract.disabled">Abstract</button> -->
                     </div>
 
-
+                    <div id="Poster4" class="boxcontent">
+                        <a href="../imgs/Donggu_poster_pages-to-jpg-0001.jpg" download="poster" target="blank">Download (jpg)</a>
+                        <a href="../imgs/Donggu_poster.pdf" download="poster" target="blank">Download (pdf)</a>
+                        <img src="../imgs/Donggu_poster_pages-to-jpg-0001.jpg" alt="Donggu Lee">
+                    </div>    
                     <div id="abstractPosterContent4" class="boxcontent">
                         <h3>Bistable dynamics of TAN-NK cells in tumor growth and control of radiotherapy-induced
                             neutropenia in lung cancer treatment</h3>
@@ -208,6 +213,24 @@
 
     <!-- JavaScript 코드 -->
     <script>
+        function downloadJPG() {
+            const fileUrl = '../imgs/pstr5_page-0001.jpg';
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'poster';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        function downloadPDF() {
+            const fileUrl = '../imgs/pstr5.pdf';
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'poster2';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
         // Add this function to your JavaScript file or in a script tag at the bottom of the page
         function toggleContent(id) {
             const content = document.getElementById(id);

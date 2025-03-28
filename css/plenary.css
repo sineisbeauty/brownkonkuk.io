@@ -122,8 +122,18 @@
     pointer-events: none;
 }
 
+.btn-poster.disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .btn-abstract {
     background-color: #0066cc;
+}
+
+.btn-poster{
+    background-color: #5b41a5;
 }
 
 .btn-abstract.disalbed {
