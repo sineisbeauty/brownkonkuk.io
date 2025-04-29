@@ -14,7 +14,7 @@ document.getElementById('footer').innerHTML = `
     <div class="row">
         <div>
             <small>
-                &copy; 2025 Kyungmo Ku. All Rights Reserved.
+                &copy; 2025 Kyungmo Ku, Hoyeon Choi. All Rights Reserved.
             </small>
         </div>
     </div>
